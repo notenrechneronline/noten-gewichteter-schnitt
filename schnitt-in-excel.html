@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gewichteten Notenschnitt in Excel und Google Sheets berechnen</title>
+<meta name="description" content="Notenschnitt gewichtet in Excel berechnen: SUMMENPRODUKT-Formel Schritt für Schritt, Alternative mit Hilfsspalte, Runden und Formatieren – mit Kopiervorlage und FAQ von Notenrechner Online.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="brand">Notenrechner Online</div>
+  <div class="tagline">Kostenlose Notenrechner &amp; Anleitungen</div>
+</header>
+<nav class="top">
+  <ul>
+    <li><a href="index.html">Gewichteter Schnitt</a></li>
+    <li><a href="ects-notenschnitt-uni.html">ECTS Uni</a></li>
+    <li><a href="wunschschnitt-erreichen.html">Wunschschnitt</a></li>
+    <li><a href="prozent-gewichtung-umrechnen.html">Prozentgewichtung</a></li>
+    <li><a href="modulnote-berechnen.html">Modulnote</a></li>
+    <li><a href="streichnote-effekt.html">Streichnote</a></li>
+    <li><a href="schnitt-in-excel.html" class="active">Excel</a></li>
+  </ul>
+</nav>
+<main>
+<article class="card">
+<h1>Gewichteten Notenschnitt in Excel und Google Sheets berechnen</h1>
+<p>Wer seine Noten ohnehin in einer Tabelle pflegt, braucht keinen Taschenrechner: Eine einzige Formel liefert den gewichteten Schnitt – automatisch aktualisiert bei jeder neuen Note. Wir von <a href="https://notenrechner-online.de/">Notenrechner Online</a> bauen die Tabelle Schritt für Schritt auf, von SUMMENPRODUKT bis zur sauberen Rundung.</p>
+
+<div class="statgrid">
+  <div class="stat"><span class="k">Formel</span><span class="v">=SUMMENPRODUKT(…)/SUMME(…)</span><span class="d">Eine Zeile genügt – ganz ohne Hilfsspalten.</span></div>
+  <div class="stat"><span class="k">Beispiel</span><span class="v">2,0</span><span class="d">Vier Fächer mit Gewichten 3 / 2 / 2 / 1.</span></div>
+  <div class="stat"><span class="k">Merksatz</span><span class="v">Semikolon</span><span class="d">Deutsche Excel- und Sheets-Versionen trennen Argumente mit ;</span></div>
+</div>
+
+<h2>Die Tabelle aufbauen</h2>
+<p>Wir legen drei Spalten an: Fach in A, Note in B, Gewicht in C. Unser Beispiel mit vier Fächern sieht so aus – die Gewichte entsprechen der üblichen <a href="index.html">Gewichtung</a> (Klausurfächer zählen mehrfach):</p>
+<table>
+<tr><th></th><th>A: Fach</th><th>B: Note</th><th>C: Gewicht</th></tr>
+<tr><td><strong>2</strong></td><td>Mathe</td><td>2</td><td>3</td></tr>
+<tr><td><strong>3</strong></td><td>Deutsch</td><td>3</td><td>2</td></tr>
+<tr><td><strong>4</strong></td><td>Englisch</td><td>1</td><td>2</td></tr>
+<tr><td><strong>5</strong></td><td>Bio</td><td>2</td><td>1</td></tr>
+</table>
+<p>Die Noten stehen in B2:B5, die Gewichte in C2:C5. Diese beiden Bereiche sind alles, was die Formel braucht.</p>
+
+<h2>SUMMENPRODUKT Schritt für Schritt</h2>
+<p>SUMMENPRODUKT multipliziert zwei Bereiche paarweise und addiert die Ergebnisse – exakt die beiden Schritte der Gewichtungsformel in einem Aufruf. Wir teilen das Resultat noch durch die Summe der Gewichte:</p>
+<div class="formula">=SUMMENPRODUKT(B2:B5;C2:C5)/SUMME(C2:C5)</div>
+<div class="example">
+<strong class="t">Rechnung Schritt für Schritt</strong>
+SUMMENPRODUKT rechnet 2×3 + 3×2 + 1×2 + 2×1 = 6 + 6 + 2 + 2 = <strong>16</strong>. SUMME(C2:C5) ergibt 3 + 2 + 2 + 1 = <strong>8</strong>. 16 ÷ 8 = <strong>2,0</strong> – der gewichtete Notenschnitt. Neue Note eintragen, und die Zelle aktualisiert sich von selbst; keine Bereichsänderung nötig, solange die Zeilen 2 bis 5 genutzt werden.
+</div>
+<h3>Google Sheets: fast identisch</h3>
+<p>In Google Sheets funktioniert dieselbe Formel – auch hier mit Semikolon in der deutschen Version: <span class="formula" style="display:inline-block;margin:.3rem 0;padding:.4rem .8rem">=SUMMENPRODUKT(B2:B5;C2:C5)/SUMME(C2:C5)</span>. Nur wer Sheets auf Englisch betreibt, nutzt Kommas statt Semikolons.</p>
+
+<h2>Alternative: Hilfsspalte für volle Kontrolle</h2>
+<p>Wem die Ein-Zeilen-Formel zu undurchsichtig ist, der rechnet die Zwischenschritte sichtbar aus: In D2 schreiben wir <span class="formula" style="display:inline-block;margin:.3rem 0;padding:.4rem .8rem">=B2*C2</span> und ziehen die Formel bis D5 herunter. Jede Zeile zeigt nun ihr gewichtetes Teilergebnis. Der Schnitt steht dann in einer Ergebniszelle:</p>
+<div class="formula">=SUMME(D2:D5)/SUMME(C2:C5)</div>
+<p>Der Vorteil: Fehler springen sofort ins Auge – eine falsch eingetragene Gewichtung verrät sich in der Hilfsspalte, während sie in SUMMENPRODUKT unsichtbar bliebe. Für das Endergebnis ist es egal, welchen Weg wir wählen.</p>
+
+<h2>Runden und Formatieren</h2>
+<p>Der Schnitt soll mit zwei Nachkommastellen erscheinen, nicht mit zwölf. Zwei saubere Wege:</p>
+<div class="formula">=RUNDEN(SUMMENPRODUKT(B2:B5;C2:C5)/SUMME(C2:C5);2)</div>
+<p>Oder per Zellformat: Ergebniszelle markieren, Rechtsklick → <em>Zellen formatieren</em> → Zahl → 2 Dezimalstellen. In Sheets: <em>Format → Zahl → Zahl</em> und die Dezimalstellen über die Symbolleiste einstellen.</p>
+<div class="warn">
+<strong>Nur das Endergebnis runden – nie die Noten selbst.</strong> Wer die Noten in Spalte B vorab rundet oder jede Zeile der Hilfsspalte einzeln rundet, verfälscht das Resultat. Excel rechnet intern mit voller Genauigkeit; wir lassen es dabei und formatieren nur die Anzeige.
+</div>
+<h3>Vorlage zum Kopieren</h3>
+<p>Unsere Kopiervorlage für eine neue Tabelle – Kopfzeile in Zeile 1, Daten ab Zeile 2, Ergebnisformel darunter:</p>
+<table>
+<tr><th>Fach</th><th>Note</th><th>Gewicht</th><th>Hilfsspalte (optional)</th></tr>
+<tr><td>Mathe</td><td>2</td><td>3</td><td>=B2*C2</td></tr>
+<tr><td>Deutsch</td><td>3</td><td>2</td><td>=B3*C3</td></tr>
+<tr><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+<tr><td><strong>Ergebnis</strong></td><td colspan="3">=SUMMENPRODUKT(B2:B5;C2:C5)/SUMME(C2:C5)</td></tr>
+</table>
+
+<h2>Häufige Fragen zu Excel und Google Sheets</h2>
+<div class="faq">
+<details>
+<summary>Komma oder Semikolon in der Formel?</summary>
+<div><p>In deutschen Excel- und Sheets-Versionen trennen wir Funktionsargumente mit dem <strong>Semikolon</strong> – also =SUMMENPRODUKT(B2:B5;C2:C5). Nur in englischsprachigen Versionen steht dort das Komma. Falsches Trennzeichen ist die häufigste Fehlerquelle beim Abtippen.</p></div>
+</details>
+<details>
+<summary>Funktioniert das auch mit Prozentgewichten?</summary>
+<div><p>Ja: Entweder die Gewichte als Dezimalfaktoren eintragen (0,4 statt 40&nbsp;%) oder in der Hilfsspalte durch 100 teilen (=B2*C2/100). Wie die Umrechnung im Detail funktioniert, erklären wir auf unserer Seite zur <a href="prozent-gewichtung-umrechnen.html">Prozentgewichtung</a>.</p></div>
+</details>
+<details>
+<summary>Was passiert bei einer leeren Notenzelle?</summary>
+<div><p>SUMMENPRODUKT behandelt leere Zellen als 0 – und 0 ist eine Note, kein „keine Note“! Zeilen mit noch ausstehenden Leistungen deshalb aus der Tabelle entfernen oder das Gewicht auf 0 setzen, bis die Note da ist. Sonst zieht eine Phantom-Null den Schnitt künstlich nach unten.</p></div>
+</details>
+<details>
+<summary>Kann ich das auch für den ECTS-Schnitt an der Uni nutzen?</summary>
+<div><p>Absolut: Einfach die Gewichte durch ECTS-Punkte ersetzen und die Modulnoten in Spalte B eintragen – die Formel bleibt identisch. Details zur Uni-Rechnung finden Sie auf unserer Seite zum <a href="ects-notenschnitt-uni.html">ECTS-Notenschnitt</a>.</p></div>
+</details>
+<details>
+<summary>Warum zeigt Excel #DIV/0! an?</summary>
+<div><p>Die Summe der Gewichte ist null – meist sind die Gewichtszellen leer oder als Text formatiert. Gewichte als Zahlen eintragen und prüfen, ob SUMME(C2:C5) einen Wert größer 0 liefert.</p></div>
+</details>
+</div>
+
+<div class="cta">
+<h2>Lieber ohne Tabelle rechnen?</h2>
+<p>Noten und Gewichte eintragen, Ergebnis sofort ablesen – <a class="alt" href="https://notenrechner-online.de/notendurchschnitt-berechnen/">zum Rechner</a> und die Formelarbeit uns überlassen. Alle Rechner finden sich auf <a class="alt" href="https://notenrechner-online.de/">https://notenrechner-online.de/</a>.</p>
+<a class="btn" href="https://notenrechner-online.de/notendurchschnitt-berechnen/">Online berechnen</a>
+</div>
+</article>
+
+<section class="more">
+<h2>Mehr zum Thema</h2>
+<ul>
+<li><a href="index.html">Notenschnitt gewichtet berechnen – Formel &amp; Beispiele für die Schule</a></li>
+<li><a href="ects-notenschnitt-uni.html">ECTS-Notenschnitt an der Uni berechnen – Module, Credit Points und Sonderfälle</a></li>
+<li><a href="wunschschnitt-erreichen.html">Wunschschnitt erreichen: Welche Noten noch fehlen</a></li>
+<li><a href="prozent-gewichtung-umrechnen.html">Prozentgewichtung umrechnen: 40/30/20 richtig rechnen</a></li>
+<li><a href="modulnote-berechnen.html">Modulnote an der Uni berechnen: Teilleistungen gewichten</a></li>
+<li><a href="streichnote-effekt.html">Streichnote: Was das Streichen der schlechtesten Note bringt</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+© 2026 Notenrechner Online · <a href="https://notenrechner-online.de/">https://notenrechner-online.de/</a>
+</footer>
+</body>
+</html>
