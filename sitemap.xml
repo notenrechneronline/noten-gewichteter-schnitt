@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://notenrechner-online.vercel.app/</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-  <url>
-    <loc>https://notenrechner-online.vercel.app/ects-notenschnitt-uni.html</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
-  <url>
-    <loc>https://notenrechner-online.vercel.app/wunschschnitt-erreichen.html</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/gewichtung-notendurchschnitt.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/restnote-berechnen.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-bewerbung.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-verbessern.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/rechenfehler-vermeiden.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
+<url>
+<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-runden.html</loc>
+<lastmod>2026-10-03</lastmod>
+</url>
 </urlset>
