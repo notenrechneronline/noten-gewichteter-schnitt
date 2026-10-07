@@ -1,31 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/gewichtung-notendurchschnitt.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/restnote-berechnen.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-bewerbung.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-verbessern.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/rechenfehler-vermeiden.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
-<url>
-<loc>https://notenrechner-online.github.io/noten-tipps/notendurchschnitt-runden.html</loc>
-<lastmod>2026-10-03</lastmod>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/gewichteter-notendurchschnitt-formel.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/ects-notenschnitt-uni.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/gewichteter-notendurchschnitt-formel.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/wunschschnitt-erreichen.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/restnote-berechnen-formel.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/prozent-gewichtung-umrechnen.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/noten-in-prozent-tabelle-linear.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/gewichteter-notendurchschnitt-formel.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/modulnote-berechnen.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/gewichteter-notendurchschnitt-formel.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/streichnote-effekt.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://noten-gewichteter-schnitt.vercel.app/schnitt-in-excel.html</loc>
+    <lastmod>2026-10-07</lastmod>
+      <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/notendurchschnitt-formel-berechnen.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://noten-gewichteter-schnitt.vercel.app/assets/gewichteter-notendurchschnitt-formel.png</image:loc>
+    </image:image>
+  </url>
 </urlset>
